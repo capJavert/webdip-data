@@ -57,7 +57,15 @@ class SiteController extends Controller
     {
       $model = new DataUsers();
 
-      if ($model->load(Yii::$app->request->post()) && $model->save()) {
+      if ($model->load(Yii::$app->request->post())) {
+        $model->drzava = $_POST['drzava'];
+        $model->spol = $_POST['spol'];
+
+        if($model->validate()) {
+          $model->save();
+        } else
+        var_dump($model->getErrors()) or die;
+
         return $this->redirect('/site/thanks');
       } else {
         return $this->render('create', [

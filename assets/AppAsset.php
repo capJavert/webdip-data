@@ -18,9 +18,12 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'css/font-awesome.min.css',
+        '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css',
         'css/main.css',
     ];
     public $js = [
+        '//code.jquery.com/ui/1.11.4/jquery-ui.js',
         'js/main.js',
     ];
     public $depends = [

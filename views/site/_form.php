@@ -28,7 +28,7 @@ use yii\helpers\ArrayHelper;
     <div class="form-group">
       <label>Spol</label>
     <?php
-        echo Html::dropDownList('spol', $model, ['Muško'=>'Muško', 'Žensko'=>'Žensko'], [
+        echo Html::dropDownList('spol', $model, ['M'=>'Muško', 'F'=>'Žensko'], [
             'prompt' => 'Odaberi',
             'class' => 'form-control',
         ]);
