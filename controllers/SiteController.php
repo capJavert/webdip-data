@@ -63,10 +63,13 @@ class SiteController extends Controller
 
         if($model->validate()) {
           $model->save();
-        } else
-        var_dump($model->getErrors()) or die;
 
-        return $this->redirect('/site/thanks');
+          return $this->redirect('/site/thanks');
+        }
+
+        return $this->render('create', [
+            'model' => $model,
+        ]);
       } else {
         return $this->render('create', [
             'model' => $model,
